@@ -1,0 +1,64 @@
+#sudo adduser ansible
+
+#sudo visudo
+ansible  ALL=(ALL:ALL) NOPASSWD: ALL
+
+
+
+#sudo vi /etc/ssh/sshd_config
+
+#sudo service sshd restart
+
+#su-ansible
+
+Installing Ansible on Ubuntu
+
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+
+#ssh-keygen
+
+#ssh-copy-id IP from controller machine 
+
+#ssh-copy-id IP-node machine ip - Controller Machine
+
+#ssh-copy-id IP-node machine ip - Controller Machine
+
+#ansible--version
+
+#sudo vi /etc/ansible/ansible.cfg
+
+[defaults]
+#inventory       = /etc/ansible/hosts
+#library         = ~/.ansible/plugins/modules:/usr/share/ansible/plugins/modules
+#module_utils    = ~/.ansible/plugins/module_utils:/usr/share/ansible/plugins/module_utils
+#remote_tmp      = ~/.ansible/tmp
+#local_tmp       = ~/.ansible/tmp
+#forks           = 5
+#poll_interval   = 0.001
+#ask_pass        = False
+#transport       = smart
+
+#sudo vi /etc/ansible/hosts
+
+[ubuntu]
+ip
+
+[node]
+ip
+
+[dev:children] concept
+ubuntu
+node
+
+#ansible-m ping all
+
+#ansible-playbook filename --syntax-check
+
+
+
+
+
+
